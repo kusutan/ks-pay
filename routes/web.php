@@ -11,6 +11,16 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view( 'index' );
+});
+
+Route::post('/posted', function (Request $request) {
+    return view('posted', [
+        'screenId' => $request->screenId,
+        'password' => $request->password,
+        'sercret' => $request->sercret ?? null,
+    ]);
 });

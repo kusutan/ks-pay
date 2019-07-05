@@ -24,3 +24,6 @@ Route::post('/posted', function (Request $request) {
         'sercret' => $request->sercret ?? null,
     ]);
 });
+
+
+return view( 'index' );
